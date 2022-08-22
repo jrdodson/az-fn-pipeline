@@ -58,11 +58,11 @@ public class FunctionTest {
         // Setup
         @SuppressWarnings("unchecked")
         final HttpRequestMessage<Optional<String>> req = mock(HttpRequestMessage.class);
-        final BlobRequest blobReq = new BlobRequest().withFileName("blobs/GTM ConOps v0.2.docx").withId(2)
+        final BlobRequest blobReq = new BlobRequest().withFileName("blobs/blob.docx").withId(2)
                 .withBlobContainer("testcontainer")
-                .withFilePath("abfss://testcontainer@fedcsuadls.core.windows.net/blobs/GTM ConOps v0.2.docx")
+                .withFilePath("")
                 .withFileExt(".docx")
-                .withBlobEndpoint("DefaultEndpointsProtocol=https;AccountName=fedcsuadls;AccountKey=8xdegymjuyVH/VQ828l7XII06hw8t9FQHjVhpQ41wdUwl+6wwwEbQHqp3x+X6uZ3WOipkKTtM2QOb3K5rsw6lA==;EndpointSuffix=core.windows.net");
+                .withBlobEndpoint("");
 
         final Optional<String> queryBody = Optional.of(mapper.writeValueAsString(blobReq));
         doReturn(queryBody).when(req).getBody();
