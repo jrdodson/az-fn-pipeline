@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.azure.fn</groupId>
+    <artifactId>fn-ingest-pipeline</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>fn-data-model</module>
+        <module>fn-twitter-mapper</module>
+        <module>fn-blob-extraction</module>
+        <module>fn-news-consumer</module>
+        <module>fn-article-parser</module>
+        <module>fn-sentiment-enrichment</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>1.8</java.version>
+
+        <azure.functions.maven.plugin.version>1.16.0</azure.functions.maven.plugin.version>
+        <azure.functions.java.library.version>1.4.2</azure.functions.java.library.version>
+        <azure.sdk.bom>1.2.0</azure.sdk.bom>
+        <blob.storage.version>12.15.0</blob.storage.version>
+
+        <jackson.min.version>2.3.1</jackson.min.version>
+        <jackson.max.version>2.10.0</jackson.max.version>
+        <jackson.compile.version>2.10.0</jackson.compile.version>
+        <jackson.version>${jackson.compile.version}</jackson.version>
+
+        <soup.version>1.14.3</soup.version>
+        <tika.version>1.19</tika.version>
+
+    </properties>
+
+</project>
